@@ -1,0 +1,124 @@
+// Footer 樣式
+.footer {
+  background-color: $warm-white;
+  border-top: 1px solid $warm-beige;
+
+  .text-muted {
+    color: $warm-text-light !important;
+  }
+}
+
+// 其他全局樣式覆蓋
+body {
+  background-color: $warm-cream;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $warm-text;
+}
+
+.navbar {
+  background-color: $warm-white !important;
+  box-shadow: 0 2px 10px rgba(210, 199, 184, 0.2);
+}
+
+.navbar-brand {
+  color: $warm-text;
+}
+
+.nav-link.active {
+  color: #8b735c !important;
+  font-weight: 500;
+}
+
+.card {
+  box-shadow: 0 8px 20px rgba(210, 199, 184, 0.15);
+
+  .card-header {
+    background-color: $warm-white;
+    border-bottom: 1px solid $warm-beige;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1rem 1.25rem;
+    color: #8b735c;
+  }
+}
+
+// 按鈕樣式擴展
+@each $color, $value in $custom-colors {
+  .btn-outline-#{$color} {
+
+    &:hover,
+    &.active,
+    &:active,
+    &:focus-visible {
+      color: $warm-white;
+    }
+  }
+}
+
+// 自定義元素樣式
+.level-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+// 利潤/損失/盈虧樣式
+.profit {
+  color: $success;
+  background: rgba($success, 0.08);
+}
+
+.loss {
+  color: $danger;
+  background: rgba($danger, 0.08);
+}
+
+.break-even {
+  color: $warning;
+  background: rgba($warning, 0.08);
+}
+
+// 動畫
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#results {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+// 計算相關樣式
+.calculation-steps {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+
+  .calc-row {
+    transition: background-color 0.2s ease;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      background-color: $warm-beige;
+    }
+  }
+}
+
+.calc-formula-text {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: $warm-text;
+}
+
+.calculation-formula {
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  color: $warm-text-light;
+  font-family: monospace;
+}
