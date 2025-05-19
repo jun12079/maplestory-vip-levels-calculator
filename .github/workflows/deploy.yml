@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages  # 部署到 GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 當 push 到 main 分支時，就觸發這個 workflow
+
+jobs:
+  build-and-deploy: # 定義一個 job，名稱為 build-and-deploy
+    runs-on: ubuntu-latest  # 指定這個 Job 在 GitHub 提供的 Ubuntu 環境上執行
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # 使用 actions/checkout action 來取出github repository的code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4 # 使用 actions/setup-node action 來設置 Node.js 環境
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci # 使用 npm ci 安裝專案的相依套件
+
+      - name: Build project
+        run: npm run build  # 使用 npm run build 來編譯專案
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # 使用 peaceiris/actions-gh-pages action 第三方工具來部署到 GitHub Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的 token 來進行身份驗證，讓這個 action 可以 push 到 gh-pages
+          publish_dir: ./dist # 指定要部署的目錄，這裡是 ./dist
