@@ -78,23 +78,6 @@ body {
   background: rgba($warning, 0.08);
 }
 
-// 動畫
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#results {
-  animation: fadeIn 0.5s ease forwards;
-}
-
 // 計算相關樣式
 .calculation-steps {
   font-size: 0.95rem;
