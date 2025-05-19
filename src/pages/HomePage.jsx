@@ -60,17 +60,12 @@ export default function Homepage() {
           <div className="d-flex flex-column flex-md-row gap-3 justify-content-center">
             <Link to="/maintain-calculator" className="btn btn-primary btn-lg px-4 py-3 shadow">
               <i className="bi bi-calculator-fill me-2"></i>
-              維持階級計算器
+              維持階級計算機
             </Link>
-            <div className="position-relative">
-              <Link to="/multi-calculator" className="btn btn-secondary btn-lg px-4 py-3 shadow disabled">
-                <i className="bi bi-layers-fill me-2"></i>
-                多段階級計算器
-              </Link>
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                即將推出
-              </span>
-            </div>
+            <Link to="/multi-calculator" className="btn btn-secondary btn-lg px-4 py-3 shadow disabled">
+              <i className="bi bi-layers-fill me-2"></i>
+              多段階級計算機
+            </Link>
           </div>
 
           <div className="mt-4 text-center">
