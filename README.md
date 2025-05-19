@@ -1,12 +1,49 @@
-# React + Vite
+# 新楓之谷 VIP 階級計算機
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+方便玩家快速計算在《新楓之谷》提升或維持 VIP 階級所需的點數與花費。
 
-Currently, two official plugins are available:
+## 專案功能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 計算不同 VIP 階級計算所需花費
+- 支援兩種點數使用方式：自用 / 送禮
+- 支援自動計算最低幣值或手動設定幣值
 
-## Expanding the ESLint configuration
+## 安裝與啟動
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. 安裝依賴：
+```bash
+npm install
+```
+2. 啟動本地開發伺服器：
+```bash
+npm run dev
+```
+3. 開啟瀏覽器：
+```bash
+http://localhost:5173
+```
+4. 編譯與打包：
+```bash
+npm run build
+```
+5. 部署到github pages：
+```bash
+npm run deploy
+```
+
+## 專案結構
+```plaintext
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Calculator.jsx
+│   │   └── HomePage.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+└── index.html
+```
+
+## 注意事項
+- 本工具僅供玩家參考使用，實際數據可能因遊戲版本或規則改動而有所不同
+- 若遇到數值異常，請確認輸入資料是否正確
