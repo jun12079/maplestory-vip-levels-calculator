@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # 當 push 到 main 分支時，就觸發這個 workflow
+  workflow_dispatch: # 允許手動觸發這個 workflow
 
 jobs:
   build-and-deploy: # 定義一個 job，名稱為 build-and-deploy
