@@ -7,7 +7,17 @@ on:
   workflow_dispatch: # 允許手動觸發這個 workflow
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npm ci
+      - run: npm run lint
   build-and-deploy: # 定義一個 job，名稱為 build-and-deploy
+    needs: lint # 這個 job 依賴於 lint job，必須在 lint job 完成後才能執行
     runs-on: ubuntu-latest  # 指定這個 Job 在 GitHub 提供的 Ubuntu 環境上執行
 
     steps:
