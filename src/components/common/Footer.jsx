@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-12 text-center">
               <p className="mb-0 text-muted">
-                Copyright &copy; {currentYear} jun12079 | 版權所有
+                Copyright &copy; {currentYear} Jun | 版權所有
               </p>
             </div>
           </div>
