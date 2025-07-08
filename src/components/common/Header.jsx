@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 const routes = [
   { path: "/maintain-calculator", name: "維持階級" },
   { path: "/multi-calculator", name: "多段階級" },
+  { path: "/platinum-hammer", name: "寵箱換鎚" },
 ];
 
 export default function Header() {
