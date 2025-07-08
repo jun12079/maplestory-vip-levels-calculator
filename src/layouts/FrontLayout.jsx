@@ -5,9 +5,13 @@ import Footer from "../components/common/Footer";
 export default function FrontLayout() {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
+        <div className="flex-grow-1">
+          <Outlet />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }
