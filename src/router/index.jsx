@@ -4,6 +4,7 @@ import FrontLayout from "../layouts/FrontLayout";
 import Homepage from "../pages/HomePage";
 import Calculator from "../pages/Calculator";
 import MutliCalculator from "../pages/MutliCalculator";
+import PlatinumHammer from "../pages/PlatinumHammer";
 import NotFound from "../pages/NotFound";
 
 const router = createHashRouter([
@@ -22,6 +23,10 @@ const router = createHashRouter([
       {
         path: 'multi-calculator',
         element: <MutliCalculator />,
+      },
+      {
+        path: 'platinum-hammer',
+        element: <PlatinumHammer />,
       }
     ]
   },
