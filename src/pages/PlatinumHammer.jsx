@@ -191,6 +191,7 @@ export default function PlatinumHammer() {
 
   // 格式化數字為台灣地區格式
   const formatNumber = (num) => {
+    if (Math.abs(num) < 0.01) num = 0;
     return num.toLocaleString('zh-TW', { maximumFractionDigits: 2 });
   };
 
@@ -515,7 +516,7 @@ export default function PlatinumHammer() {
                             </div>
                             <div className="calc-formula-text">楓幣 ÷ 幣值</div>
                             <div className="calculation-formula text-muted">
-                              {formatNumber(0)} ÷ {formatNumber(16000000)}
+                              {formatNumber(0)} ÷ {formatNumber(calculationResults.coinValue)}
                             </div>
                           </div>
                         </div>
